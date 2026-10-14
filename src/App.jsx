@@ -14,26 +14,25 @@ function App() {
 
         <div className="row">
           {/* 3. Reutilizamos el componente AlumnoCard pasándole Props diferentes */}
-          <AlumnoCard
-            nombre="Daniel Puccio"
-            carrera="Desarrollo de Software"
-            estado="Matriculado"
-          />
+        <AlumnoCard
+          nombre="Maria Perez"
+          carrera="Diseño Gráfico"
+          estado="Inactivo"
+        />
 
-          <AlumnoCard
-            nombre="Maria Perez"
-            carrera="Diseño Gráfico"
-            estado="Inactivo"
-          />
-
-          <AlumnoCard
-            nombre="Carlos Mendoza"
-            carrera="Administración Industrial"
-            estado="Matriculado"
-          />
-        </div>
+        <AlumnoCard
+          nombre="Carlos Mendoza"
+          carrera="Administración Industrial"
+          estado="Matriculado"
+        />
       </div>
-    </>
+
+      <Contador
+        
+      />
+
+    </div>
+  </>
   );
 }
 
