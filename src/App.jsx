@@ -1,8 +1,11 @@
 // src/App.jsx
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import AlumnoCard from './components/AlumnoCard';
 
 function App() {
+  const [numero, setNumero] = useState(0);
+
   return (
     <>
       {/* 1. Insertamos el Navbar en la parte superior */}
@@ -27,9 +30,13 @@ function App() {
         />
       </div>
 
-      <Contador
-        
-      />
+        <p>{numero}</p>
+        <button
+          className="btn btn-warning mx-2"
+          onClick={() => setNumero(0)}
+        >
+          Reiniciar
+        </button>
 
     </div>
   </>
