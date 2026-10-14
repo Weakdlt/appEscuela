@@ -43,7 +43,7 @@ const AlumnoCard = ({ nombre, carrera, estadoInicial }) => {
               </button>
               <button className="btn btn-sm btn-outline-danger">Eliminar</button>
             </div>
-          </div>s
+          </div>
         </div>
       </div>
     </div>

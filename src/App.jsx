@@ -1,11 +1,10 @@
 // src/App.jsx
-import { useState } from 'react';
 import Navbar from './components/Navbar';
 import AlumnoCard from './components/AlumnoCard';
+// 1. Añadimos la importación del Contador
+import Contador from './components/Contador'; 
 
 function App() {
-  const [numero, setNumero] = useState(0);
-
   return (
     <>
       {/* 1. Insertamos el Navbar en la parte superior */}
@@ -17,30 +16,32 @@ function App() {
 
         <div className="row">
           {/* 3. Reutilizamos el componente AlumnoCard pasándole Props diferentes */}
-        <AlumnoCard
+          <AlumnoCard
+            nombre="Daniel Puccio"
+            carrera="Desarrollo de Software"
+            estadoInicial="Matriculado" 
+          />
+
+         <AlumnoCard
           nombre="Maria Perez"
           carrera="Diseño Gráfico"
-          estado="Inactivo"
+          estadoInicial="Inactivo"
         />
 
         <AlumnoCard
           nombre="Carlos Mendoza"
           carrera="Administración Industrial"
-          estado="Matriculado"
+          estadoInicial="Matriculado"
         />
       </div>
 
-        <p>{numero}</p>
-        <button
-          className="btn btn-warning mx-2"
-          onClick={() => setNumero(0)}
-        >
-          Reiniciar
-        </button>
+      {/* 4. Insertamos el componente Contador */}
+      <Contador />
 
     </div>
   </>
   );
 }
 
+// Eliminamos la "}" extra que tenías al final
 export default App;
